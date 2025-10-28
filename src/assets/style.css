@@ -1,0 +1,45 @@
+:root{
+  --max-w:1440px;
+  --green: #16a34a; /* open */
+  --amber: #d97706; /* in_progress */
+  --gray: #6b7280;  /* closed */
+  --bg: #f8fafc;
+  --accent: #2563eb;
+}
+
+*{box-sizing:border-box}
+html,body,#app{height:100%;margin:0;background:var(--bg);font-family:Inter,system-ui,Arial,sans-serif;color:#111}
+
+.container{
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* hero */
+.hero{
+  position:relative;
+  overflow:hidden;
+  padding:80px 24px;
+  text-align:center;
+  background:linear-gradient(180deg,#ffffff 0%, #f1f5f9 100%);
+}
+.hero .decor-circle{
+  position:absolute;border-radius:50%;opacity:0.25;
+}
+.hero .decor-circle.one{width:180px;height:180px;right:8%;top:12%;}
+.hero .decor-circle.two{width:120px;height:120px;left:6%;top:6%;}
+.hero .cta{display:inline-flex;gap:12px;margin-top:18px}
+
+/* card */
+.card{background:#fff;border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(16,24,40,0.06);}
+
+/* ticket status */
+.status-open{color:var(--green)}
+.status-in_progress{color:var(--amber)}
+.status-closed{color:var(--gray)}
+
+/* responsive */
+@media (max-width: 768px){
+  .hero{padding:48px 16px}
+}
